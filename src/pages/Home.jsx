@@ -4,7 +4,7 @@ function Home({ onNavigate }) {
   return (
     <div className="home-wrap">
       <div className="home-hero">
-        <span className="home-eyebrow">[ GROUP_01 ]</span>
+        <span className="home-eyebrow">[ GROUP_04 ]</span>
         <h1 className="home-title">
           React Activity
           <br />
