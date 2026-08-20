@@ -28,7 +28,6 @@ function Home({ onNavigate }) {
       <div className="home-grid">
         <div className="home-card">
           <div className="home-card-top">
-            <span className="home-number">N°01</span>
             <span className="home-tag">ACTIVITY</span>
           </div>
           <h3>Login Flow</h3>
