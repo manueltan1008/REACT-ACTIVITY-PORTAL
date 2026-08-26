@@ -43,6 +43,8 @@ function Activity1() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
+            <br />
+            <br />
 
             <label className="field-label">Password</label>
             <input
@@ -53,7 +55,11 @@ function Activity1() {
               onChange={(e) => setPassword(e.target.value)}
             />
 
+            <br />
+            <br />
+
             {message && <div className="message-box">{message}</div>}
+            
 
             <button className="btn-block primary" onClick={handleLogin}>
               Login

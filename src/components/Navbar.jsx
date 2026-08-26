@@ -21,8 +21,18 @@ function Navbar({ current, onNavigate }) {
           className={current === 'activity1' ? 'nav-link active' : 'nav-link'}
           onClick={() => onNavigate('activity1')}
         >
+          
           <span className="nav-dot" />
           Activity 1
+        </button>
+
+        <button
+          className={current === 'activity2' ? 'nav-link active' : 'nav-link'}
+          onClick={() => onNavigate('activity2')}
+        >
+          
+          <span className="nav-dot" />
+          Activity 2
         </button>
       </nav>
     </header>

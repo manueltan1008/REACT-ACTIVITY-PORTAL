@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.jsx'
 import Home from './pages/Home.jsx'
 import Activity1 from './pages/Activity1.jsx'
 import './App.css'
+import Activity2 from './pages/Activity2.jsx'
 
 function App() {
   const [page, setPage] = useState('home')
@@ -10,6 +11,7 @@ function App() {
   const renderPage = () => {
     if (page === 'home') return <Home onNavigate={setPage} />
     if (page === 'activity1') return <Activity1 />
+    if (page === 'activity2') return <Activity2 />
     return <Home onNavigate={setPage} />
   }
 
