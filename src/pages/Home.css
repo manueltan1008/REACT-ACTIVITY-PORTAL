@@ -68,15 +68,28 @@
   margin: 64px 0 40px;
 }
 
+/* CHANGED: was a single fixed 340px column, now a responsive 3-up grid */
 .home-grid {
   display: grid;
-  grid-template-columns: minmax(0, 340px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 760px) {
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .home-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-left: 3px solid var(--accent);
   border-radius: 10px;
   padding: 26px;
   display: flex;
@@ -89,26 +102,21 @@
   transform: translateY(-2px);
 }
 
-.home-card-top {
+/* CHANGED: replaces .home-card-top / .home-number / .home-tag
+   with a single rounded number badge, matching the screenshot */
+.home-card-number {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 14px;
   margin-bottom: 20px;
-}
-
-.home-number {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  color: var(--ink);
-  font-weight: 500;
-}
-
-.home-tag {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  font-weight: 500;
 }
 
 .home-card h3 {
@@ -126,25 +134,24 @@
   margin: 0 0 22px;
 }
 
+/* CHANGED: was a bare text link, now a full-width solid button */
 .btn-open {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  align-self: flex-start;
-  background: transparent;
+  justify-content: center;
+  width: 100%;
+  background: var(--accent);
   border: none;
-  padding: 0;
+  border-radius: 8px;
+  padding: 13px 0;
   font-weight: 600;
-  font-size: 13px;
-  color: var(--ink);
+  font-size: 14px;
+  color: var(--surface);
+  transition: background 0.15s ease;
 }
 
 .btn-open:hover {
-  color: var(--accent);
-}
-
-.btn-open:hover .btn-arrow {
-  transform: translateX(2px);
+  background: var(--ink);
 }
 
 @media (max-width: 600px) {

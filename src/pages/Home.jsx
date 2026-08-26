@@ -28,11 +28,23 @@ function Home({ onNavigate }) {
       <div className="home-grid">
         <div className="home-card">
           <div className="home-card-top">
-            <span className="home-tag">ACTIVITY</span>
+            <span className="home-tag">ACTIVITY 1</span>
           </div>
           <h3>Login Flow</h3>
           <p>Secure access and role-based states.</p>
           <button className="btn-open" onClick={() => onNavigate('activity1')}>
+            Open activity
+            <span className="btn-arrow">→</span>
+          </button>
+        </div>
+
+        <div className="home-card">
+          <div className="home-card-top">
+            <span className="home-tag">ACTIVITY 2</span>
+          </div>
+          <h3>Grade Evaluation</h3>
+          <p>Score validation and conditional remarks.</p>
+          <button className="btn-open" onClick={() => onNavigate('activity2')}>
             Open activity
             <span className="btn-arrow">→</span>
           </button>
