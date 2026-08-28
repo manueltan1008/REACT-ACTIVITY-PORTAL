@@ -49,6 +49,18 @@ function Home({ onNavigate }) {
             <span className="btn-arrow">→</span>
           </button>
         </div>
+
+        <div className="home-card">
+          <div className="home-card-top">
+            <span className="home-tag">ACTIVITY 4</span>
+          </div>
+          <h3>Electricity Billing</h3>
+          <p>Consumption-based rates and usage status.</p>
+          <button className="btn-open" onClick={() => onNavigate('activity4')}>
+            Open activity
+            <span className="btn-arrow">→</span>
+          </button>
+        </div>
       </div>
     </div>
   )
